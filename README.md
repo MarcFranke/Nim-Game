@@ -1,4 +1,4 @@
-# Nim-Spiel
+# Nim-Game
 
 A web-based implementation of a variant of the classic game of Nim, featuring multiple rule‐sets and AI opponents. Features human vs AI, AI vs AI, and probability‐driven gameplay in your browser. For use as an introduction to ML in high school. Dice are used to simulate transition probabilities, which are adapted during gameplay to gradually approach an optimal strategy. This mimics a learning process similar to machine learning, where outcomes shape the system's behavior over time.
 
@@ -54,8 +54,8 @@ Nim-Spiel/
 
 Open `index.html` in your browser to get started:
 ```bash
-git clone https://github.com/MarcFranke/nim-spiel.git
-cd nim-spiel
+git clone https://github.com/MarcFranke/nim-game.git
+cd nim-game
 open index.html
 ````
 
@@ -86,7 +86,7 @@ open index.html
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/MarcFranke/nim-spiel.git
+   git clone https://github.com/MarcFranke/nim-game.git
    ```
 
 2. **Browse the game**
