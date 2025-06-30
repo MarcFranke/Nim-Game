@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent vs. Agent Nim-Spiel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Agent vs. Agent Nim-Spiel</h1>
+  <div id="turnIndicator"></div>
+  <div id="track"></div>
+  
+  <div id="controls">
+    <button id="runPauseBtn">Simulation starten</button>
+    <button id="restartBtn">Spiel neustarten</button>
+    <label style="margin-left:1em;">
+      Verzögerung:
+      <input type="range" id="delaySlider" min="0" max="2000" value="100" step="50">
+      <span id="delayValue">100</span> ms
+    </label>
+    <button id="trainAgent2Btn">Trainierten Agent 2 laden</button>
+
+  </div>
+
+  <div class="agent-panel-container">
+    <div class="agent-panel">
+      <h2>Agent 1</h2>
+      <div id="dice-grid-agent1" class="dice-grid"></div>
+      <div id="agent-moves-row-1" class="agent-moves-row"></div>
+    </div>
+    <div class="agent-panel">
+      <h2>Agent 2</h2>
+      <div id="dice-grid-agent2" class="dice-grid"></div>
+      <div id="agent-moves-row-2" class="agent-moves-row"></div>
+    </div>
+  </div>
+
+  <div id="log"></div>
+  <div class="stats-row" style="display:flex;gap:24px;align-items:flex-start;max-width:820px;margin:1em 0;">
+    <div style="max-width:400px;width:100%;">
+      <canvas id="winChart"></canvas>
+    </div>
+    <div id="evalBarContainer" style="max-width:400px;width:100%;">
+      <div style="font-size:0.9em;margin-bottom:2px;">Evaluation (letzte 20 Spiele):</div>
+      <div id="evalBar" style="height:24px;width:100%;background:#eee;display:flex;border-radius:6px;overflow:hidden;">
+        <div id="evalBarAgent1" style="background:#d9534f;width:50%;transition:width 0.3s;"></div>
+        <div id="evalBarAgent2" style="background:#428bca;width:50%;transition:width 0.3s;"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:0.9em;">
+        <span id="evalBarAgent1Label" style="color:#d9534f;">50%</span>
+        <span id="evalBarAgent2Label" style="color:#428bca;">50%</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

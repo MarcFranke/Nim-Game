@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nim-Spiel</title>
+  <link rel="stylesheet" href="style.css"></head>
+<body>
+  <h1>Nim-Spiel</h1>
+  <div id="turnIndicator"></div>
+  <div id="track"></div>
+  <div id="controls">
+    <button id="move1">1 Schritt</button>
+    <button id="move2">2 Schritte</button>
+    <button id="move3">3 Schritte</button>
+    <button id="restart">Neustart</button>
+    <label style="margin-left:1em;">
+      <input type="checkbox" id="autoHuman">
+      Automatisch trainieren (Mensch wählt zufällig)
+      <input type="checkbox" id="autoRestart">
+      Automatisch neustarten
+    </label>
+    <label style="margin-left:1em;">
+      <input type="range" id="autoHumanDelay" min="0" max="2000" value="500" step="100">
+      <span id="autoHumanDelayValue">500</span> ms
+    </label>
+  </div>
+  <div id="grid-container">
+    <div id="dice-grid"></div>
+    
+  </div>
+  <div id="grid-container-2">
+      <div id="agent-moves-row"></div>
+  </div>
+
+  <div id="log"></div>
+  <div style="max-width:400px;margin:1em 0;">
+    <canvas id="winChart"></canvas>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

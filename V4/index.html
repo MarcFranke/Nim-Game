@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent vs. Agent Nim-Spiel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Agent vs. Agent Nim-Spiel</h1>
+  <div id="turnIndicator"></div>
+  <div id="track"></div>
+  
+  <div id="controls">
+    <button id="runPauseBtn">Simulation starten</button>
+    <button id="restartBtn">Spiel neustarten</button>
+    <label style="margin-left:1em;">
+      Verzögerung:
+      <input type="range" id="delaySlider" min="0" max="2000" value="100" step="50">
+      <span id="delayValue">100</span> ms
+    </label>
+  </div>
+
+  <div class="agent-panel-container">
+    <div class="agent-panel">
+      <h2>Agent 1</h2>
+      <div id="dice-grid-agent1" class="dice-grid"></div>
+      <div id="agent-moves-row-1" class="agent-moves-row"></div>
+    </div>
+    <div class="agent-panel">
+      <h2>Agent 2</h2>
+      <div id="dice-grid-agent2" class="dice-grid"></div>
+      <div id="agent-moves-row-2" class="agent-moves-row"></div>
+    </div>
+  </div>
+
+  <div id="log"></div>
+  <div style="max-width:400px;margin:1em 0;">
+    <canvas id="winChart"></canvas>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
