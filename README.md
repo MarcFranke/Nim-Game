@@ -112,6 +112,6 @@ Please ensure code is well‐documented and follows existing style conventions.
 
 ## 📄 License
 
-* **Code**: [MIT License](LICENSE)
+* **Code**: GNU General Public License v3.0 ([GPL-3.0](https://www.gnu.org/licenses/gpl-3.0.html))
 * **Rules**: Created by Daniel Hoherz, Osnabrück. CC BY-NC-SA 4.0
 
